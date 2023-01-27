@@ -30,7 +30,7 @@ pip install valda
 ```
 or you can download from the UVa ILP group github via [this link](https://github.com/uvanlp/valda).
 
-## Contributoors
+## Contributors
 
 - [Yangfeng Ji](https://yangfengji.net/)
 - [Stephanie Schoch](https://stephanieschoch.com/)
