@@ -17,7 +17,7 @@ The current version (v0.1.5) supports five different data valuation methods
   - IF only works with the classifiers built with PyTorch, because it requires gradient computation.
 
 
-It also support all the classifiers from Sklearn for valuation, and also user-defined classifier using PyTorch. 
+It supports all the classifiers from Sklearn for valuation, and also user-defined classifier using PyTorch. 
 
 Please checkout a simple tutorial on [Google Colab](https://colab.research.google.com/drive/1agsMNqZan-3RnJLQtBGATRHHWYMe7C9H?usp=sharing), for how to use this package. 
 
