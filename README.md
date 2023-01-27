@@ -1,4 +1,3 @@
-# Valda
 
 Valda is a Python package for data valuation in machine learning. 
 
@@ -16,7 +15,7 @@ It also support all the classifiers from Sklearn for valuation, and also user-de
 You can install the package with `pip`
 
 ```bash
-	pip install valda
+pip install valda
 ```
 
 and find a simple tutorial on [Google Colab](https://colab.research.google.com/drive/1agsMNqZan-3RnJLQtBGATRHHWYMe7C9H?usp=sharing). 

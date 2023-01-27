@@ -1,5 +1,3 @@
 theme: jekyll-theme-slate
 title: Valda
 description: A Python Package of Data Valuation in Machine Learning
-show_downloads: true
-google_analytics:
