@@ -7,6 +7,7 @@ name = "valda"
 version = "0.1.5"
 authors = [
   { name="Yangfeng Ji", email="yangfeng@virginia.edu" },
+  { name="Stephanie Schoch", email="sns2gr@virginia.edu" },
 ]
 description = "A Data Valuation Package for Machine Learning"
 readme = "README.md"
