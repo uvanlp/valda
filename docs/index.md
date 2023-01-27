@@ -14,7 +14,7 @@ It also support all the classifiers from Sklearn for valuation, and also user-de
 
 You can install the package with `pip`
 
-```bash
+```
 pip install valda
 ```
 
