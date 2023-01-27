@@ -19,17 +19,17 @@ class LogisticRegression(torch.nn.Module):
         outputs = self.softmax(self.linear(x))
         return outputs
 
+if __name__ == '__main__':
+    data = load(open('../data/diabetes.pkl', 'rb'))
+    trnX, trnY = data['trnX'], data['trnY']
+    devX, devY = data['devX'], data['devY']
+    print('trnX.shape = {}'.format(trnX.shape))
 
-data = load(open('../data/diabetes.pkl', 'rb'))
-trnX, trnY = data['trnX'], data['trnY']
-devX, devY = data['devX'], data['devY']
-print('trnX.shape = {}'.format(trnX.shape))
-
-labels = list(set(trnY))
-le = preprocessing.LabelEncoder()
-le.fit(labels)
-trnY = le.transform(trnY)
-devY = le.transform(devY)
+    labels = list(set(trnY))
+    le = preprocessing.LabelEncoder()
+    le.fit(labels)
+    trnY = le.transform(trnY)
+    devY = le.transform(devY)
 
 
 model = LogisticRegression(input_dim=trnX.shape[1], output_dim=len(labels))
