@@ -20,7 +20,7 @@ pip install valda
 
 and find a simple tutorial on [Google Colab](https://colab.research.google.com/drive/1agsMNqZan-3RnJLQtBGATRHHWYMe7C9H?usp=sharing). 
 
-## Contributoors
+### Contributoors
 
 - [Yangfeng Ji](https://yangfengji.net/)
 - [Stephanie Schoch](https://stephanieschoch.com/)
