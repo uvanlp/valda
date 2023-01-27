@@ -7,7 +7,7 @@ Valda is a Python package for data valuation in machine learning. If you are int
 you may be interested in the functions provided by this package.
 
 
-The current version (v0.1.5) supports five different data valuation methods 
+The current version supports five different data valuation methods 
 
 - Leave-one-out (LOO), 
 - Data Shapley with the TMC algorithm (TMC-Shapley) from [Ghorbani and Zou (2019)](https://proceedings.mlr.press/v97/ghorbani19c.html), 

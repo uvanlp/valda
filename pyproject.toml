@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "valda"
-version = "0.1.6"
+version = "0.1.7"
 authors = [
   { name="Yangfeng Ji", email="yangfeng@virginia.edu" },
   { name="Stephanie Schoch", email="sns2gr@virginia.edu" },
@@ -28,6 +28,3 @@ dependencies = [
 [project.urls]
 "Homepage" = "https://uvanlp.org/valda"
 "Bug Tracker" = "https://github.com/uvanlp/valda/issues"
-
-[tool.setuptools]
-exclude=["tests"]
