@@ -26,7 +26,7 @@ Please checkout a simple tutorial on [Google Colab](https://colab.research.googl
 
 ## Installation
 
-For running it on local machines, Valda requires Python 3.6+. It is available through `pip`
+For running it on local machines, Valda requires Python 3.6+. It is available through [PyPI](https://pypi.org/project/valda/)
 
 ```
 pip install valda
