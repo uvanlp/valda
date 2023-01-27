@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "valda"
+version = "0.1.5"
+authors = [
+  { name="Yangfeng Ji", email="yangfeng@virginia.edu" },
+]
+description = "A Data Valuation Package for Machine Learning"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://uvanlp.org/valda"
+"Bug Tracker" = "https://github.com/uvanlp/valda/issues"
