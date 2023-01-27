@@ -24,9 +24,9 @@ It supports all the classifiers from Sklearn for valuation, and also user-define
 Please checkout a simple tutorial on [Google Colab](https://colab.research.google.com/drive/1agsMNqZan-3RnJLQtBGATRHHWYMe7C9H?usp=sharing), for how to use this package. 
 
 
-## Setup
+## Installation
 
-You should be running Python 3.6+ to use this package. Valda is available through `pip`
+For running it on local machines, Valda requires Python 3.6+. It is available through `pip`
 
 ```
 pip install valda
