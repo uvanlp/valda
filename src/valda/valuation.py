@@ -90,10 +90,12 @@ class DataValuation(object):
                 self.values[idx] = vals[idx]
         elif method == 'inf-func':
             n_iter = self.params['if_iter']
-            trn_batch_size = self.params['trn_batch_size']
-            dev_batch_size = self.params['dev_batch_size']
+            second_order_grad = self.params['second_order_grad']
+            for_high_value = self.params['for_high_value']
             vals = inf_func(self.trnX, self.trnY, self.devX, self.devY,
-                                clf=self.clf)
+                                clf=self.clf,
+                                second_order_grad=second_order_grad,
+                                for_high_value=for_high_value)
             for idx in range(len(vals)):
                 self.values[idx] = vals[idx]
         else:

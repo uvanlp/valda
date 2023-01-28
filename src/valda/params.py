@@ -20,8 +20,8 @@ class Parameters(object):
             'beta_chain':10,
             # For Influence Function
             'if_iter':30,
-            'trn_batch_size':16,
-            'dev_batch_size':16
+            'second_order_grad':False,
+            'for_high_value':True
             }
     
     def update(self, new_params):
@@ -29,7 +29,7 @@ class Parameters(object):
             try:
                 self.params[key] = val
             except KeyError:
-                print("Undefined key {} with value {}".format(key))
+                raise KeyError("Undefined key {} with value {}".format(key))
         # return self.params
 
 

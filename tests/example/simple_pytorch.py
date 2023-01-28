@@ -4,12 +4,14 @@
 import torch
 from pickle import load
 from sklearn import preprocessing
+from matplotlib import pyplot as plt
 
 import valda
 from valda.valuation import DataValuation
 from valda.pyclassifier import PytorchClassifier
 from valda.eval import data_removal
 from valda.metrics import weighted_acc_drop
+from valda.params import Parameters
 
 
 class LogisticRegression(torch.nn.Module):
@@ -42,10 +44,17 @@ if __name__ == '__main__':
 
     dv = DataValuation(trnX, trnY, devX, devY)
 
-    vals = dv.estimate(clf=clf, method='loo')
+    params = Parameters()
+    # params.update({'second_order_grad':True})
+    # params.update({'for_high_value':False})
+
+    vals = dv.estimate(clf=clf, method='inf-func', params=params.get_values())
 
     # print(vals)
 
-    accs = data_removal(vals, trnX, trnY, tstX, tstY)
+    accs = data_removal(vals, trnX, trnY, tstX, tstY, clf)
     res = weighted_acc_drop(accs)
     print("The weighted accuracy drop is {}".format(res))
+    # plt.plot(res)
+    # plt.show()
+    print(accs)

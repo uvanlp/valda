@@ -34,7 +34,7 @@ class Data(Dataset):
 class PytorchClassifier(object):
     def __init__(self, model, optim=None, loss=None,
                      epochs=10,
-                     trn_batch_size=1,
+                     trn_batch_size=16,
                      dev_batch_size=16):
         '''
         model - a classifier built with PyTorch
