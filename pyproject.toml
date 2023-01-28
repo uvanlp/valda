@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "valda"
-version = "0.1.8"
+version = "0.1.9"
 authors = [
   { name="Yangfeng Ji", email="yangfeng@virginia.edu" },
   { name="Stephanie Schoch", email="sns2gr@virginia.edu" },

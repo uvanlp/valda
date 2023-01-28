@@ -93,10 +93,7 @@ class DataValuation(object):
             trn_batch_size = self.params['trn_batch_size']
             dev_batch_size = self.params['dev_batch_size']
             vals = inf_func(self.trnX, self.trnY, self.devX, self.devY,
-                                clf=self.clf,
-                                epochs=n_iter,
-                                trn_batch_size=trn_batch_size,
-                                dev_batch_size=dev_batch_size)
+                                clf=self.clf)
             for idx in range(len(vals)):
                 self.values[idx] = vals[idx]
         else:
@@ -111,4 +108,4 @@ class DataValuation(object):
         if self.values is not None:
             return self.values
         else:
-            raise ValueError("No values are computed")
+            raise ValueError("No values computed")

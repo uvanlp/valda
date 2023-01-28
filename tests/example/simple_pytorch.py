@@ -5,8 +5,11 @@ import torch
 from pickle import load
 from sklearn import preprocessing
 
+import valda
 from valda.valuation import DataValuation
 from valda.pyclassifier import PytorchClassifier
+from valda.eval import data_removal
+from valda.metrics import weighted_acc_drop
 
 
 class LogisticRegression(torch.nn.Module):
@@ -20,9 +23,10 @@ class LogisticRegression(torch.nn.Module):
         return outputs
 
 if __name__ == '__main__':
-    data = load(open('../data/diabetes.pkl', 'rb'))
+    data = load(open('diabetes.pkl', 'rb'))
     trnX, trnY = data['trnX'], data['trnY']
     devX, devY = data['devX'], data['devY']
+    tstX, tstY = data['tstX'], data['tstY']
     print('trnX.shape = {}'.format(trnX.shape))
 
     labels = list(set(trnY))
@@ -30,13 +34,18 @@ if __name__ == '__main__':
     le.fit(labels)
     trnY = le.transform(trnY)
     devY = le.transform(devY)
+    tstY = le.transform(tstY)
 
+    model = LogisticRegression(input_dim=trnX.shape[1], output_dim=len(labels))
+    clf = PytorchClassifier(model, epochs=20, trn_batch_size=16,
+                                dev_batch_size=16)
 
-model = LogisticRegression(input_dim=trnX.shape[1], output_dim=len(labels))
-clf = PytorchClassifier(model)
+    dv = DataValuation(trnX, trnY, devX, devY)
 
-dv = DataValuation(trnX, trnY, devX, devY)
+    vals = dv.estimate(clf=clf, method='loo')
 
-vals = dv.estimate(clf=clf, method='inf-func')
+    # print(vals)
 
-print(vals)
+    accs = data_removal(vals, trnX, trnY, tstX, tstY)
+    res = weighted_acc_drop(accs)
+    print("The weighted accuracy drop is {}".format(res))
