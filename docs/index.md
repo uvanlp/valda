@@ -32,7 +32,6 @@ For running it on local machines, Valda requires Python 3.6+. It is available th
 ```
 pip install valda
 ```
-or you can download from the UVa ILP group github via [this link](https://github.com/uvanlp/valda).
 
 ## Contributors
 
