@@ -1,5 +1,6 @@
 
-[![Downloads](https://static.pepy.tech/personalized-badge/valda?period=month&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/valda)
+
+[![Downloads](https://static.pepy.tech/personalized-badge/valda?period=total&units=international_system&left_color=brightgreen&right_color=orange&left_text=Downloads)](https://pepy.tech/project/valda)
 
 ## Introduction
 
