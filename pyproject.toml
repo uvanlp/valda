@@ -6,8 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "valda"
 version = "0.1.10"
 authors = [
-  { name="Yangfeng Ji", email="yangfeng@virginia.edu" },
-  { name="Stephanie Schoch", email="sns2gr@virginia.edu" },
+  { name="UVa ILP Lab", email="yangfeng@virginia.edu" },
 ]
 description = "A Data Valuation Package for Machine Learning"
 readme = "README.md"
