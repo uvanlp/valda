@@ -18,7 +18,7 @@ The current version supports five different data valuation methods. It supports 
 - Class-wise Shapley (CS-Shapley) from [Schoch et al. (2022)](https://arxiv.org/abs/2211.06800)
 - Influence Function (IF) from [Koh and Liang (2017)](https://arxiv.org/abs/1703.04730)
   - IF only works with the classifiers built with PyTorch, because it requires gradient computation.
-  - v0.1.8 only support the first-order gradient computation, and we will add the second-order computation soon.
+  - The current version only support the first-order gradient computation, and we will add the second-order computation soon.
 
 
 
