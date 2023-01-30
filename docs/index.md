@@ -1,7 +1,4 @@
 
-
-[![Downloads](https://static.pepy.tech/personalized-badge/valda?period=total&units=international_system&left_color=brightgreen&right_color=orange&left_text=Downloads)](https://pepy.tech/project/valda)
-
 ## Introduction
 
 Valda is a Python package for data valuation in machine learning. If you are interested in 
